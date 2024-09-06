@@ -9,7 +9,8 @@
 #export TOMCAT_APP_PATH=tomcat在部署机器上的路径
 
 ### base函数
-killTomcat(){
+killTomcat()
+{
   pid = `ps -ef |grep tomcat|grep java|awk '{print $2}'`
   echo "tomcat ID list :$pid"
   if [ "$pid" = ""]
@@ -17,6 +18,7 @@ killTomcat(){
     echo "no tomcat pid alive"
   else
     kill -9 $pid
+  fi
 }
 cd $PROJ_PATH/demo3
 mvn clean install
