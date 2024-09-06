@@ -18,7 +18,7 @@ killTomcat(){
   else
     kill -9 $pid
 }
-cd $PROJ_PATH/demo3
+cd $PROJ_PATH/demo
 mvn clean install
 
 #停tomcat
