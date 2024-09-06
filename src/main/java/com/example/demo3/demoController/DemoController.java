@@ -13,7 +13,7 @@ public class DemoController {
 
     @GetMapping("/hello")
     public String hello(){
-        return "测试jenkins自动化部署";
+        return "测试jenkins自动化部署，啦啦啦啦啦";
     }
 
 
