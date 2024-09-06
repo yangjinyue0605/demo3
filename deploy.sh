@@ -32,7 +32,7 @@ rm -f $TOMCAT_APP_PATH/webapps/ROOT.jar
 rm -f $TOMCAT_APP_PATH/webapps/demo3-0.0.1-SNAPSHOT.jar
 
 #复制新的工程
-cp $PROJ_PATH/demo/target/demo3-0.0.1-SNAPSHOT.jar $TOMCAT_APP_PATH/webapps/
+cp $PROJ_PATH/demo3/target/demo3-0.0.1-SNAPSHOT.jar $TOMCAT_APP_PATH/webapps/
 
 cd $TOMCAT_APP_PATH/webapps/
 mv demo3-0.0.1-SNAPSHOT.jar ROOT.jar
