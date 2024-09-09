@@ -21,6 +21,7 @@ killTomcat()
   fi
 }
 cd $PROJ_PATH/demo3
+#先clean target,再重新install打包
 mvn clean install
 
 #停tomcat
@@ -31,10 +32,11 @@ rm -rf $TOMCAT_APP_PATH/webapps/ROOT
 rm -f $TOMCAT_APP_PATH/webapps/ROOT.war
 rm -f $TOMCAT_APP_PATH/webapps/demo3-0.0.1-SNAPSHOT.war
 
-#复制新的工程
+#复制新的工程，复制war包到tomcat的webapps下
 cp $PROJ_PATH/demo3/target/demo3-0.0.1-SNAPSHOT.war $TOMCAT_APP_PATH/webapps/
 
 cd $TOMCAT_APP_PATH/webapps/
+#重命名war包为ROOT.war
 mv demo3-0.0.1-SNAPSHOT.war ROOT.war
 
 #启动tomcat

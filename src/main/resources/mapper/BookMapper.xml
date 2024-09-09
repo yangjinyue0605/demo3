@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo3.dao.BookMapper">
+
+    <insert id="insertBook" useGeneratedKeys="true" keyProperty="bookId">
+        insert into book(book_name, price, stock) values(#{bookName}, #{price}, #{stock})
+    </insert>
+
+    <update id="updateBook">
+        update book set book_name = #{bookName}, price = #{price}, stock = #{stock}
+        where book_id = #{bookId}
+    </update>
+
+    <delete id="deleteBook">
+        delete from book where book_id = #{bookId}
+    </delete>
+
+    <select id="getBook" resultType="com.example.demo3.entity.Book">
+        select book_id, book_name, price, stock from book
+        where book_id = #{bookId}
+    </select>
+
+</mapper>

@@ -1,0 +1,14 @@
+
+spring:
+  datasource:
+    url: jdbc:mysql://rm-7xv2v1cd1s9qxptwqjo.mysql.rds.aliyuncs.com:3306/test?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: root_0988
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+mybatis:
+  type-aliases-package: com.example.demo3
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:/mapper/*Mapper.xml
